@@ -8,7 +8,7 @@ describe("Likes", () => {
       .send({
         url: "https://github.com/Rocketseat/umbriel",
         title: "Umbriel",
-        techs: ["Node", "Express", "TypeScript"]
+        techs: ["Node", "Express", "TypeScript"],
       });
 
     let response = await request(app).post(
@@ -27,6 +27,7 @@ describe("Likes", () => {
       likes: 2
     });
   });
+   
 
   it("should not be able to like a repository that does not exist", async () => {
     await request(app)
